@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'star/base.html' %}
+{% block child_block %}
+<h1>Student Information</h1>
+<hr>
+<table border="2">
+    <thead>
+    <th>No</th>
+    <th>Name</th>
+    <th>Marks</th>
+    <th>Address</th>
+    </thead>
+    {% for i in students %}
+    <tr>
+        <td>{{i.sno}}</td>
+        <td>{{i.sname}}</td>
+        <td>{{i.smarks}}</td>
+        <td>{{i.sadd}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/insert" class="btn btn-primary btn-lg m-2">Insert New Record</a>
+{% endblock child_block %}
+
+
+
+
+
+
+
+
+

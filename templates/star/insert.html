@@ -1,0 +1,9 @@
+    <!DOCTYPE html>
+    {% extends 'star/base.html' %}
+    {% block child_block %}
+    <form method="POST">
+        {{ form.as_p}}
+        {% csrf_token %}
+        <input type ="submit" class="btn btn-primary btn-lg" value="Insert Record">
+    </form>
+    {% endblock child_block %}
